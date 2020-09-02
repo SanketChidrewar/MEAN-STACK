@@ -1,0 +1,109 @@
+--------------[1]--------------
+url:(GET)
+localhost:3000/
+
+response:-
+<h1>WELCOME TO PIZZA CENTER</h1>
+
+
+--------------[2]---------------
+url:-(POST)
+localhost:3000/insertCustomer
+
+body:-
+{
+    "name":"Vaibhav",
+    "password": "vaib@123",
+    "mobile": "7854692452",
+    "address": "solapur",
+    "email": "vaib@gmail.com"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 7,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+
+---------------[3]--------------------
+url:-(GET)
+localhost:3000/customer
+
+response:-
+[
+    {
+        "id": 1,
+        "name": "Sanket",
+        "password": "sank@123",
+        "mobile": "9764595693",
+        "address": "udgir",
+        "email": "sank@gmail.com"
+    },
+    {
+        "id": 6,
+        "name": "shubham",
+        "password": "shub@123",
+        "mobile": "7507272838",
+        "address": "udgir",
+        "email": "shub@gmail.com"
+    },
+    {
+        "id": 7,
+        "name": "Vaibhav",
+        "password": "vaib@123",
+        "mobile": "7854692452",
+        "address": "solapur",
+        "email": "vaib@gmail.com"
+    }
+]
+
+------------[4]----------------
+url:-(POST)
+localhost:3000/insertPizza_items
+
+body:-
+
+{
+    "name":"Vaibhav",
+    "type": "Cauliflower",
+    "category": "pizza",
+    "description": "pizza"
+    }
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 3,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+
+----------------[5]-------------
+url:-(POST)
+localhost:3000/pizza_items
+
+body:-
+{
+    "name":"Vaibhav"
+}
+
+response:-
+[
+    {
+        "id": 3,
+        "name": "Vaibhav",
+        "type": "Cauliflower",
+        "category": "pizza",
+        "description": "pizza"
+    }
+]
