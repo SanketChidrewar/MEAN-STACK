@@ -1,0 +1,79 @@
+mysql> create database nodeApps;
+Query OK, 1 row affected (0.56 sec)
+
+mysql> use nodeApps
+Database changed
+
+CREATE TABLE customer (
+id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30),
+password VARCHAR(15),
+mobile VARCHAR(15),
+address VARCHAR(60),
+email VARCHAR(40) );
+
+mysql> CREATE TABLE customer (
+    -> id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    -> name VARCHAR(30),
+    -> password VARCHAR(15),
+    -> mobile VARCHAR(15),
+    -> address VARCHAR(60),
+    -> email VARCHAR(40) );
+Query OK, 0 rows affected, 1 warning (2.54 sec)
+
+mysql> desc customer
+    -> ;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| id       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(30) | YES  |     | NULL    |                |
+| password | varchar(15) | YES  |     | NULL    |                |
+| mobile   | varchar(15) | YES  |     | NULL    |                |
+| address  | varchar(60) | YES  |     | NULL    |                |
+| email    | varchar(40) | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+6 rows in set (0.07 sec)
+
+
+CREATE TABLE pizza_items (
+id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(40),
+type VARCHAR(20),
+category VARCHAR(30),
+description VARCHAR(120) );
+
+
+mysql> CREATE TABLE pizza_items (
+    -> id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    -> name VARCHAR(40),
+    -> type VARCHAR(20),
+    -> category VARCHAR(30),
+    -> description VARCHAR(120) );
+Query OK, 0 rows affected, 1 warning (1.11 sec)
+
+mysql> desc pizza_items;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name        | varchar(40)  | YES  |     | NULL    |                |
+| type        | varchar(20)  | YES  |     | NULL    |                |
+| category    | varchar(30)  | YES  |     | NULL    |                |
+| description | varchar(120) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.04 sec)
+
+ALTER TABLE customer
+ADD UNIQUE (email);
+
+mysql> ALTER TABLE customer
+    -> ADD UNIQUE (email);
+Query OK, 0 rows affected (1.71 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+
+
+
+
