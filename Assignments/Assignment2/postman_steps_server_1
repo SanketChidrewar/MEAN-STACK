@@ -1,0 +1,144 @@
+----------------------------------------------------------------------------------------------
+----------------------------------CUSTOMERS TABLE CRUD OPERATIONS------------------------------
+----------------------------------------------------------------------------------------------
+url:-
+
+
+body:-
+
+
+response:-
+
+
+-----------------------------------------------[1]------------------------------------------------
+url:-(GET)
+localhost:3000/customers
+
+body:-
+
+response:-
+[
+    {
+        "id": 1,
+        "name": "sanket",
+        "password": "sank",
+        "mobile": "note 4",
+        "address": "udgir",
+        "email": "sank@gmail.com"
+    }
+]
+
+-----------------------------------------------[2]------------------------------------------------
+
+
+url:-(POST)
+localhost:3000/customers
+
+body:-
+{
+    "name": "shubham",
+    "password": "shub",
+    "mobile": "samsung galaxy",
+    "address": "udgir",
+    "email": "shub@gmail.com"
+}
+
+---------OR-------------
+{
+    "name": "vaibhav",
+    "password": "vaib",
+    "mobile": "Realme",
+    "address": "solapur",
+    "email": "vaib@gmail.com"
+}
+---------OR-------------
+{
+    "name": "sarang",
+    "password": "sara",
+    "mobile": "vivo",
+    "address": "baramati",
+    "email": "sara@gmail.com"
+}
+---------OR-------------
+{
+    "name": "mayur",
+    "password": "mayu",
+    "mobile": "oopo",
+    "address": "jalgaon",
+    "email": "mayu@gmail.com"
+}
+---------OR-------------
+{
+    "name": "akshay",
+    "password": "aksh",
+    "mobile": "Apple",
+    "address": "pune",
+    "email": "aksh@gmail.com"
+}
+
+response:-
+
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 2,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+
+-----------------------------------------------[3]------------------------------------------------
+
+
+url:-(PUT)
+localhost:3000/customers
+
+body:-
+{
+    "id": "2",
+    "name": "shubham",
+    "password": "shub",
+    "mobile": "samsung",
+    "address": "udgir",
+    "email": "shub@gmail.com"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 0,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "(Rows matched: 1  Changed: 1  Warnings: 0",
+    "protocol41": true,
+    "changedRows": 1
+}
+
+-----------------------------------------------[4]------------------------------------------------
+
+
+url:-(DELETE)
+localhost:3000/customers
+
+body:-
+{
+    "id": "2"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 0,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+
+
+
