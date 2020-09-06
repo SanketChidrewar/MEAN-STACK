@@ -1,0 +1,354 @@
+----------------------------------------------------------------------------------------------
+----------------------------------CUSTOMERS TABLE CRUD OPERATIONS------------------------------
+----------------------------------------------------------------------------------------------
+url:-
+
+
+body:-
+
+
+response:-
+
+
+-----------------------------------------------[1]------------------------------------------------
+url:-(GET)
+localhost:3000/customers
+
+body:-
+
+response:-
+[
+    {
+        "id": 1,
+        "name": "sanket",
+        "password": "sank",
+        "mobile": "note 4",
+        "address": "udgir",
+        "email": "sank@gmail.com"
+    }
+]
+
+-----------------------------------------------[2]------------------------------------------------
+
+
+url:-(POST)
+localhost:3000/customers
+
+body:-
+{
+    "name": "shubham",
+    "password": "shub",
+    "mobile": "samsung galaxy",
+    "address": "udgir",
+    "email": "shub@gmail.com"
+}
+
+---------OR-------------
+{
+    "name": "vaibhav",
+    "password": "vaib",
+    "mobile": "Realme",
+    "address": "solapur",
+    "email": "vaib@gmail.com"
+}
+---------OR-------------
+{
+    "name": "sarang",
+    "password": "sara",
+    "mobile": "vivo",
+    "address": "baramati",
+    "email": "sara@gmail.com"
+}
+---------OR-------------
+{
+    "name": "mayur",
+    "password": "mayu",
+    "mobile": "oopo",
+    "address": "jalgaon",
+    "email": "mayu@gmail.com"
+}
+---------OR-------------
+{
+    "name": "akshay",
+    "password": "aksh",
+    "mobile": "Apple",
+    "address": "pune",
+    "email": "aksh@gmail.com"
+}
+
+response:-
+
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 2,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+
+-----------------------------------------------[3]------------------------------------------------
+
+
+url:-(PUT)
+localhost:3000/customers
+
+body:-
+{
+    "id": "2",
+    "name": "shubham",
+    "password": "shub",
+    "mobile": "samsung",
+    "address": "udgir",
+    "email": "shub@gmail.com"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 0,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "(Rows matched: 1  Changed: 1  Warnings: 0",
+    "protocol41": true,
+    "changedRows": 1
+}
+
+-----------------------------------------------[4]------------------------------------------------
+
+
+url:-(DELETE)
+localhost:3000/customers
+
+body:-
+{
+    "id": "2"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 0,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+------------------------------------------------PIZZA ITEMS-------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
+
+
+url:-
+
+body:-
+
+response:-
+
+-------------------------------------------------[1]------------------------------------------------
+
+url:-(POST)
+localhost:3000/pizza_items
+
+body:-
+{
+    "name": "Margherita",
+    "type": "veg",
+    "category": "simply veg",
+    "description": "single chess topping"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 1,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+
+-----------------------------------------------[2]------------------------------------------------
+
+url:-(POST)
+localhost:3000/pizza_items
+
+body:-
+{
+    "name": "Cheese and Tomato",
+    "type": "veg",
+    "category": "simply veg",
+    "description": "chess and Tomato"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 2,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+
+-----------------------------------------------[3]--------------------------------------------
+
+url:-(POST)
+localhost:3000/pizza_items
+
+body:-
+{
+    "name": "veg Hawaiian Delight",
+    "type": "veg",
+    "category": "veg Treat",
+    "description": "Golden Corn, Pineapple, jalapeno"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 3,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+---------------------------------------------[4]-----------------------------------------------
+
+url:-(POST)
+localhost:3000/pizza_items
+
+body:-
+{
+    "name": "Chicken Salami Special",
+    "type": "NonVeg",
+    "category": "Simply NonVeg",
+    "description": "Cheese and Exotic Chicken"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 4,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+---------------------------------------------[5]-----------------------------------------------
+
+url:-(POST)
+localhost:3000/pizza_items
+
+body:-
+{
+    "name": "Cheese and Barbeque Chicken",
+    "type": "NonVeg",
+    "category": "Simply NonVeg",
+    "description": "Barbeque Chicken, Cheese"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 5,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+---------------------------------------------[6]-----------------------------------------------
+
+url:-(POST)
+localhost:3000/pizza_items
+
+body:-
+{
+    "name": "Cheese Hawaiian Twist",
+    "type": "NonVeg",
+    "category": "NonVeg Treat",
+    "description": "Exotic Chicken, Pineapple, jalapeno"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 6,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+----------------------------------------------[7]-----------------------------------------------
+
+url:-(PUT)
+localhost:3000/pizza_items
+
+body:-
+{
+    "id": 6,
+    "name": "Cheese Hawaiian Twist",
+    "type": "Non-Veg",
+    "category": "NonVeg Treat",
+    "description": "Exotic Chicken, Pineapple, jalapeno"
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 0,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "(Rows matched: 1  Changed: 1  Warnings: 0",
+    "protocol41": true,
+    "changedRows": 1
+}
+
+--------------------------------------------[8]-----------------------------------------------
+
+url:-(DELETE)
+localhost:3000/pizza_items
+
+body:-
+{
+    "id": 6
+}
+
+response:-
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 0,
+    "serverStatus": 2,
+    "warningCount": 0,
+    "message": "",
+    "protocol41": true,
+    "changedRows": 0
+}
+
+---------------------------------------------END-------------------------------------------
+
+
+
+
