@@ -1,0 +1,234 @@
+url:- 
+
+body:-
+
+response:-
+
+------------------------------------------------------------------------------------------------
+
+url:- (POST)
+localhost:3000/user/signup
+
+body:-
+{
+"firstName": "shubham",
+"lastName": "chidrewar",
+"email": "shub@test.com",
+"password": "shub1",
+"phone": "++917507272838"
+} 
+
+response:-
+{
+    "status": "success",
+    "data": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 2,
+        "info": "",
+        "serverStatus": 2,
+        "warningStatus": 0
+    }
+}
+------------------------------------------------------------------------------------------------
+url:- (POST)
+localhost:3000/user/signup
+
+body:-
+{
+"firstName": "shubham",
+"lastName": "chidrewar",
+"email": "shub@test.com",
+"password": "shub1",
+"phone": "++917507272838"
+} 
+
+response:-
+{
+    "status": "success",
+    "data": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 2,
+        "info": "",
+        "serverStatus": 2,
+        "warningStatus": 0
+    }
+}
+-------------------------------------------------------------------------------------------------
+url:- (POST)
+localhost:3000/user/signin
+
+body:-
+{
+"email": "shub@test.com",
+"password": "shub1"
+} 
+
+response:-
+{
+    "status": "success",
+    "data": {
+        "firstName": "shubham",
+        "lastName": "chidrewar",
+        "email": "shub@test.com",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTk5NDc5NTQ3fQ.fXwBAzplo22s4kHrGvrBgdhe2k2JU98N7KBewk4tjiA"
+    }
+}
+------------------------------------------------------------------------------------------------
+url:- (POST)
+localhost:3000/user/signin
+
+body:-
+{
+"email": "sank@test.com",
+"password": "sank1"
+} 
+
+response:-
+{
+    "status": "success",
+    "data": {
+        "firstName": "sanket",
+        "lastName": "chidrewar",
+        "email": "sank@test.com",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTk5NDc5NjE5fQ.tB9dmzioFK8BX8Gm5z0iijUMOkZxUpRMJh6dOgA0wWs"
+    }
+}
+------------------------------------------------------------------------------------------------
+url:- (GET)
+localhost:3000/user/profile
+
+body:-
+header:- token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTk5NDc5NjE5fQ.tB9dmzioFK8BX8Gm5z0iijUMOkZxUpRMJh6dOgA0wWs
+
+response:-
+{
+    "status": "success",
+    "data": {
+        "email": "sank@test.com",
+        "firstName": "sanket",
+        "lastName": "chidrewar",
+        "mobile": "+919764595693"
+    }
+}
+------------------------------------------------------------------------------------------------
+url:- (POST)
+localhost:3000/note/
+
+body:-
+{
+"contents": "sanket notes"
+} 
+
+response:-
+{
+    "status": "success",
+    "data": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 7,
+        "info": "",
+        "serverStatus": 2,
+        "warningStatus": 0
+    }
+}
+------------------------------------------------------------------------------------------------
+url:- (POST)
+localhost:3000/note/
+
+body:-
+{
+"contents": "sanket 2nd notes"
+} 
+
+response:-
+{
+    "status": "success",
+    "data": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 8,
+        "info": "",
+        "serverStatus": 2,
+        "warningStatus": 0
+    }
+}
+------------------------------------------------------------------------------------------------
+url:- (GET)
+localhost:3000/note/
+
+body:-
+headres:- token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTk5NDc5NjE5fQ.tB9dmzioFK8BX8Gm5z0iijUMOkZxUpRMJh6dOgA0wWs
+
+response:-
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 7,
+            "userId": 1,
+            "contents": "sanket notes",
+            "timestamp": "2020-09-07T12:07:24.000Z"
+        },
+        {
+            "id": 8,
+            "userId": 1,
+            "contents": "sanket 2nd notes",
+            "timestamp": "2020-09-07T12:08:25.000Z"
+        }
+    ]
+}
+------------------------------------------------------------------------------------------------
+url:-(PUT) 
+localhost:3000/note/
+
+body:-
+{
+"contents": "sanket 2nd notes updated"
+} 
+
+response:-
+{
+    "status": "success",
+    "data": {
+        "fieldCount": 0,
+        "affectedRows": 2,
+        "insertId": 0,
+        "info": "Rows matched: 2  Changed: 2  Warnings: 0",
+        "serverStatus": 34,
+        "warningStatus": 0,
+        "changedRows": 2
+    }
+}
+------------------------------------------------------------------------------------------------
+url:- (DELETE)
+localhost:3000/note/
+
+body:-
+{
+"contents": "sanket 2nd notes updated"
+} 
+
+response:-
+{
+    "status": "success",
+    "data": {
+        "fieldCount": 0,
+        "affectedRows": 2,
+        "insertId": 0,
+        "info": "",
+        "serverStatus": 34,
+        "warningStatus": 0
+    }
+}
+------------------------------------------------------------------------------------------------
+url:- 
+
+body:-
+
+response:-
+
+------------------------------------------------------------------------------------------------
+
+
